@@ -25,7 +25,7 @@ Make sure you have the following installed. The collaboration package is needed 
 ```bash
 pip install jupyterlab==4.4.1 jupyter-collaboration==4.0.2 ipykernel
 pip uninstall -y pycrdt datalayer_pycrdt
-pip install datalayer_pycrdt==0.12.15
+pip install datalayer_pycrdt==0.12.17
 ```
 
 Then, start JupyterLab with the following command.
