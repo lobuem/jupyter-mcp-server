@@ -30,11 +30,3 @@ To get started:
 
 Looking for blog posts, videos or other resources related to Jupyter MCP Server? <br/>
 👉 Check out the [Resources](https://jupyter-mcp-server.datalayer.tech/docs/resources) documentation section.
-
-## Building from Source
-
-You can build the Docker image it from source.
-
-```bash
-make build-docker
-```
