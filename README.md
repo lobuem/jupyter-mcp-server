@@ -25,11 +25,11 @@ Key features include:
 
 To get started:
 
-- 📘 Follow the [Usage Guide](TODO) to use Jupyter-MCP-server with a MCP compatible client.
-- 🧰 Dive into the [Tools](TODO) documentation section to understand the tools powering the server.
+- 📘 Follow the [Usage Guide](https://jupyter-mcp-server.datalayer.tech/docs/usage) to use Jupyter-MCP-server with a MCP compatible client.
+- 🧰 Dive into the [Tools](https://jupyter-mcp-server.datalayer.tech/docs/tools) documentation section to understand the tools powering the server.
 
 Looking for blog posts, videos or other resources related to Jupyter MCP Server? <br/>
-👉 Check out the [Resources](TODO) documentation section.
+👉 Check out the [Resources](https://jupyter-mcp-server.datalayer.tech/docs/resources) documentation section.
 
 ## Building from Source
 
