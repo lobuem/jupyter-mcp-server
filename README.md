@@ -14,150 +14,28 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/jupyter-mcp-server)](https://pypi.org/project/jupyter-mcp-server)
 [![smithery badge](https://smithery.ai/badge/@datalayer/jupyter-mcp-server)](https://smithery.ai/server/@datalayer/jupyter-mcp-server)
 
-Jupyter MCP Server is a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server implementation that provides interaction with 📓 Jupyter notebooks running in any JupyterLab (works also with your 💻 local JupyterLab).
+**Jupyter MCP Server** is a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server implementation that provides interaction with 📓 Jupyter notebooks running in any JupyterLab (works also with your 💻 local JupyterLab).
+
+Key features include:
+
+- ⚡ **Real-time control**: view the notebook change in real-time.
+- 🔁 **Smart execution**: automatically adjusts when a cell run fails.
+- 🤝 **MCP-Compatible**: compatible with any MCP clients like Claude Desktop, Cursor, Windsurf, and more.
 
 ![Jupyter MCP Server](https://assets.datalayer.tech/jupyter-mcp/jupyter-mcp-server-claude-demo.gif)
 
-## Start JupyterLab
+To get started:
 
-Make sure you have the following installed. The collaboration package is needed as the modifications made on the notebook can be seen thanks to [Jupyter Real Time Collaboration](https://jupyterlab.readthedocs.io/en/stable/user/rtc.html).
+- 📘 Follow the [Usage Guide](TODO) to use Jupyter-MCP-server with a MCP compatible client.
+- 🧰 Dive into the [Tools](TODO) documentation section to understand the tools powering the server.
 
-```bash
-pip install jupyterlab==4.4.1 jupyter-collaboration==4.0.2 ipykernel
-pip uninstall -y pycrdt datalayer_pycrdt
-pip install datalayer_pycrdt==0.12.17
-```
+Looking for blog posts, videos or other resources related to Jupyter MCP Server? <br/>
+👉 Check out the [Resources](TODO) documentation section.
 
-Then, start JupyterLab with the following command.
-
-```bash
-jupyter lab --port 8888 --IdentityProvider.token MY_TOKEN --ip 0.0.0.0
-```
-
-You can also run `make jupyterlab`.
-
-> [!NOTE]
->
-> The `--ip` is set to `0.0.0.0` to allow the MCP server running in a Docker container to access your local JupyterLab.
-
-## Use with Claude Desktop
-
-Claude Desktop can be downloaded [from this page](https://claude.ai/download) for macOS and Windows.
-
-For Linux, we had success using this [UNOFFICIAL build script based on nix](https://github.com/k3d3/claude-desktop-linux-flake)
-
-```bash
-# ⚠️ UNOFFICIAL
-# You can also run `make claude-linux`
-NIXPKGS_ALLOW_UNFREE=1 nix run github:k3d3/claude-desktop-linux-flake \
-  --impure \
-  --extra-experimental-features flakes \
-  --extra-experimental-features nix-command
-```
-
-To use this with Claude Desktop, add the following to your `claude_desktop_config.json` (read more on the [MCP documentation website](https://modelcontextprotocol.io/quickstart/user#2-add-the-filesystem-mcp-server)).
-
-> [!IMPORTANT]
->
-> Ensure the port of the `SERVER_URL`and `TOKEN` match those used in the `jupyter lab` command.
->
-> The `NOTEBOOK_PATH` should be relative to the directory where JupyterLab was started.
-
-### Claude Configuration on macOS and Windows
-
-```json
-{
-  "mcpServers": {
-    "jupyter": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "SERVER_URL",
-        "-e",
-        "TOKEN",
-        "-e",
-        "NOTEBOOK_PATH",
-        "datalayer/jupyter-mcp-server:latest"
-      ],
-      "env": {
-        "SERVER_URL": "http://host.docker.internal:8888",
-        "TOKEN": "MY_TOKEN",
-        "NOTEBOOK_PATH": "notebook.ipynb"
-      }
-    }
-  }
-}
-```
-
-### Claude Configuration on Linux
-
-```bash
-CLAUDE_CONFIG=${HOME}/.config/Claude/claude_desktop_config.json
-cat <<EOF > $CLAUDE_CONFIG
-{
-  "mcpServers": {
-    "jupyter": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "SERVER_URL",
-        "-e",
-        "TOKEN",
-        "-e",
-        "NOTEBOOK_PATH",
-        "--network=host",
-        "datalayer/jupyter-mcp-server:latest"
-      ],
-      "env": {
-        "SERVER_URL": "http://localhost:8888",
-        "TOKEN": "MY_TOKEN",
-        "NOTEBOOK_PATH": "notebook.ipynb"
-      }
-    }
-  }
-}
-EOF
-cat $CLAUDE_CONFIG
-```
-
-## Components
-
-### Tools
-
-The server currently offers 2 tools:
-
-1. `add_execute_code_cell`
-
-- Add and execute a code cell in a Jupyter notebook.
-- Input:
-  - `cell_content`(string): Code to be executed.
-- Returns: Cell output.
-
-2. `add_markdown_cell`
-
-- Add a markdown cell in a Jupyter notebook.
-- Input:
-  - `cell_content`(string): Markdown content.
-- Returns: Success message.
-
-## Building
+## Building from Source
 
 You can build the Docker image it from source.
 
 ```bash
 make build-docker
-```
-
-## Installing via Smithery
-
-To install Jupyter MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@datalayer/jupyter-mcp-server):
-
-```bash
-npx -y @smithery/cli install @datalayer/jupyter-mcp-server --client claude
 ```
