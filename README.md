@@ -26,7 +26,7 @@ Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/docs
 
 ## 🏁 Getting Started
 
-Follow our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/setup) or use the quick steps below:
+Follow our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/docs/setup) or use the quick steps below:
 
 ### 1. Set Up Your Environment
 
