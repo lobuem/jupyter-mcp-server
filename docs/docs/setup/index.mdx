@@ -1,21 +1,12 @@
-# Usage
+# Setup
 
-To use **Jupyter MCP Server**, you need to:
+To setup **Jupyter MCP Server**, you need to:
 
-1. [Start JupyterLab](#start-jupyterlab)
-2. [Configure your preferred MCP client](#configuration)
+1. [Set up your environment](#environment-setup)
+2. [Start JupyterLab](#start-jupyterlab)
+2. [Configure your preferred MCP client](#configuration). You can also use [Smithery](#installing-via-smithery) to install Jupyter MCP Server automatically for your preferred client.
 
-      We have examples for:
-        - [Claude Desktop](./claude_desktop)
-        - [Cursor](./cursor)
-        - [Cline](./cline)
-        - [Windsurf](./windsurf)
-
-      BUT this server is compatible with **any** MCP client — see the growing list in [MCP clients](https://modelcontextprotocol.io/clients). This means that you are **not** limited to the clients listed above.
-
-You can also use [Smithery](#installing-via-smithery) to install Jupyter MCP Server automatically for your preferred client.
-
-## Start JupyterLab
+## Environment Setup
 
 Make sure you have the following packages installed in your environment. The collaboration package is needed as the modifications made on the notebook can be seen thanks to [Jupyter Real Time Collaboration](https://jupyterlab.readthedocs.io/en/stable/user/rtc.html).
 
@@ -24,6 +15,8 @@ pip install jupyterlab==4.4.1 jupyter-collaboration==4.0.2 ipykernel
 pip uninstall -y pycrdt datalayer_pycrdt
 pip install datalayer_pycrdt==0.12.17
 ```
+
+## Start JupyterLab
 
 Then, start JupyterLab with the following command.
 
