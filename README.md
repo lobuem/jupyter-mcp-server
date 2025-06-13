@@ -22,7 +22,7 @@
 
 ![Jupyter MCP Server Demo](https://assets.datalayer.tech/jupyter-mcp/jupyter-mcp-server-claude-demo.gif)
 
-Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/docs/tools) to learn about the tools powering Jupyter MCP Server.
+🛠️ This MCP offers multiple tools such as `insert_execute_code_cell`, `append_markdown_cell`, `get_notebook_info`, `read_cell`, and more, enabling advanced interactions with Jupyter notebooks. Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/docs/tools) to learn about all the tools powering Jupyter MCP Server.
 
 ## 🏁 Getting Started
 
