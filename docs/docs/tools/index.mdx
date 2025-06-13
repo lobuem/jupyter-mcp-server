@@ -5,13 +5,13 @@ The server currently offers 10 tools:
 1. `append_execute_code_cell`
     - Append at the end of the notebook a code cell with the provided source and execute it.
     - Input:
-      - `cell_source`(string): Code to be executed.
-    - Returns: Cell output.
+      - `cell_source`(string): Code source.
+    - Returns: List of outputs from the executed cell.
 
 2. `append_markdown_cell`
-    - Append at the end of the notebook a markdown cell with the provided content.
+    - Append at the end of the notebook a markdown cell with the provided source.
     - Input:
-      - `cell_source`(string): Markdown content.
+      - `cell_source`(string): Markdown source.
     - Returns: Success message.
 
 3. `insert_execute_code_cell`
@@ -25,7 +25,7 @@ The server currently offers 10 tools:
     - Insert a markdown cell at a specific index in the notebook.
     - Input:
       - `cell_index`(int): Index where the cell should be inserted (0-based).
-      - `cell_source`(string): Markdown content.
+      - `cell_source`(string): Markdown source.
     - Returns: Success message.
 
 5. `delete_cell`
@@ -42,12 +42,12 @@ The server currently offers 10 tools:
     - Read a specific cell from the notebook.
     - Input:
       - `cell_index`(int): Index of the cell to read (0-based).
-    - Returns: Dictionary with cell index, type, content, and outputs (for code cells).
+    - Returns: Dictionary with cell index, type, source, and outputs (for code cells).
 
 8. `read_all_cells`
     - Read all cells from the notebook.
-    - Returns:  List of cell information including index, type, content,
-                    and outputs (for code cells)
+    - Returns:  List of cell information including index, type, source,
+                    and outputs (for code cells).
 
 9. `execute_cell`
     - Execute a specific cell from the notebook.

@@ -60,8 +60,8 @@ def extract_output(output: dict) -> str:
 
 
 @mcp.tool()
-async def add_markdown_cell(cell_source: str) -> str:
-    """Add a markdown cell in a Jupyter notebook.
+async def append_markdown_cell(cell_source: str) -> str:
+    """Append at the end of the notebook a markdown cell with the provided source.
 
     Args:
         cell_source: Markdown source
@@ -121,8 +121,8 @@ async def overwrite_cell_source(cell_index: int, cell_source: str) -> str:
 
 
 @mcp.tool()
-async def add_execute_code_cell(cell_source: str) -> list[str]:
-    """Add and execute a code cell in a Jupyter notebook.
+async def append_execute_code_cell(cell_source: str) -> list[str]:
+    """Append at the end of the notebook a code cell with the provided source and execute it.
 
     Args:
         cell_source: Code source
