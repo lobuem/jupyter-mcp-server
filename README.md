@@ -22,11 +22,11 @@
 
 ![Jupyter MCP Server Demo](https://assets.datalayer.tech/jupyter-mcp/jupyter-mcp-server-claude-demo.gif)
 
-🛠️ This MCP offers multiple tools such as `insert_execute_code_cell`, `append_markdown_cell`, `get_notebook_info`, `read_cell`, and more, enabling advanced interactions with Jupyter notebooks. Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/docs/tools) to learn about all the tools powering Jupyter MCP Server.
+🛠️ This MCP offers multiple tools such as `insert_execute_code_cell`, `append_markdown_cell`, `get_notebook_info`, `read_cell`, and more, enabling advanced interactions with Jupyter notebooks. Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/tools) to learn about all the tools powering Jupyter MCP Server.
 
 ## 🏁 Getting Started
 
-For comprehensive setup instructions—including Streamable HTTP transport and advanced configuration—see our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/docs/setup). Or, get started quickly with the `stdio` transport below:
+For comprehensive setup instructions—including `Streamable HTTP` transport and advanced configuration—see our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/setup). Or, get started quickly with the `stdio` transport below:
 
 ### 1. Set Up Your Environment
 
@@ -103,9 +103,9 @@ jupyter lab --port 8888 --IdentityProvider.token MY_TOKEN --ip 0.0.0.0
 }
 ```
 
-For detailed instructions on configuring various MCP clients—including [Claude Desktop](https://jupyter-mcp-server.datalayer.tech/docs/clients/claude_desktop), [Cursor](https://jupyter-mcp-server.datalayer.tech/docs/clients/cursor), [Cline](https://jupyter-mcp-server.datalayer.tech/docs/clients/cline), and [Windsurf](https://jupyter-mcp-server.datalayer.tech/docs/clients/windsurf)—see the [Clients documentation](https://jupyter-mcp-server.datalayer.tech/docs/clients).
+For detailed instructions on configuring various MCP clients—including [Claude Desktop](https://jupyter-mcp-server.datalayer.tech/clients/claude_desktop), [Cursor](https://jupyter-mcp-server.datalayer.tech/clients/cursor), [Cline](https://jupyter-mcp-server.datalayer.tech/clients/cline), and [Windsurf](https://jupyter-mcp-server.datalayer.tech/clients/windsurf)—see the [Clients documentation](https://jupyter-mcp-server.datalayer.tech/clients).
 
 ## 📚 Resources
 
 Looking for blog posts, videos, or other materials about Jupyter MCP Server?<br>
-👉 Visit the [Resources section](https://jupyter-mcp-server.datalayer.tech/docs/resources) for more.
+👉 Visit the [Resources section](https://jupyter-mcp-server.datalayer.tech/resources) for more.
