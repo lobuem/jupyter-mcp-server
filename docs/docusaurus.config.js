@@ -44,10 +44,52 @@ module.exports = {
           label: 'Overview',
         },
         {
-          href: 'https://www.linkedin.com/company/datalayer',
+          type: 'doc',
+          docId: 'setup/index',
+          position: 'left',
+          label: 'Setup',
+        },
+        {
+          type: 'doc',
+          docId: 'clients/index',
+          position: 'left',
+          label: 'Clients',
+        },
+        {
+          type: 'doc',
+          docId: 'tools/index',
+          position: 'left',
+          label: 'Tools',
+        },
+        {
+          type: 'doc',
+          docId: 'develop/index',
+          position: 'left',
+          label: 'Develop',
+        },
+        {
+          type: 'doc',
+          docId: 'contribute/index',
+          position: 'left',
+          label: 'Contribute',
+        },
+        {
+          type: 'doc',
+          docId: 'resources/index',
+          position: 'left',
+          label: 'Resources',
+        },
+        {
+          href: 'https://discord.gg/YQFwvmSSuR',
           position: 'right',
-          className: 'header-linkedin-link',
-          'aria-label': 'LinkedIn',
+          className: 'header-discord-link',
+          'aria-label': 'Discord',
+        },
+        {
+          href: 'https://github.com/datalayer',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub',
         },
         {
           href: 'https://bsky.app/profile/datalayer.io',
@@ -56,16 +98,34 @@ module.exports = {
           'aria-label': 'Bluesky',
         },
         {
-          href: 'https://github.com/datalayer/jupyter-mcp-server',
+          href: 'https:/x.com/DatalayerIO',
           position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub',
+          className: 'header-x-link',
+          'aria-label': 'X',
+        },
+        {
+          href: 'https://www.linkedin.com/company/datalayer',
+          position: 'right',
+          className: 'header-linkedin-link',
+          'aria-label': 'LinkedIn',
+        },
+        {
+          href: 'https://tiktok.com/@datalayerio',
+          position: 'right',
+          className: 'header-tiktok-link',
+          'aria-label': 'TikTok',
+        },
+        {
+          href: 'https://www.youtube.com/@datalayer',
+          position: 'right',
+          className: 'header-youtube-link',
+          'aria-label': 'YouTube',
         },
         {
           href: 'https://datalayer.io',
           position: 'right',
           className: 'header-datalayer-io-link',
-          'aria-label': 'Datalayer IO',
+          'aria-label': 'Datalayer',
         },
       ],
     },
@@ -77,7 +137,7 @@ module.exports = {
           items: [
             {
               label: 'Jupyter MCP Server',
-              to: '/docs',
+              to: '/',
             },
           ],
         },
@@ -133,6 +193,7 @@ module.exports = {
       {
         docs: {
           routeBasePath: '/',
+          docItemComponent: '@theme/CustomDocItem',  
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/datalayer/jupyter-mcp-server/edit/main/',
         },
