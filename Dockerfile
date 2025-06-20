@@ -16,4 +16,5 @@ RUN pip install -e .
 RUN pip uninstall -y pycrdt datalayer_pycrdt
 RUN pip install datalayer_pycrdt==0.12.17
 
-CMD ["python", "-m", "jupyter_mcp_server.server"]
+EXPOSE 4040
+ENTRYPOINT ["python", "-m", "jupyter_mcp_server.server"]

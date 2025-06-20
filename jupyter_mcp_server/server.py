@@ -6,6 +6,8 @@ import logging
 import os
 from typing import Union
 
+import click
+import uvicorn
 from jupyter_kernel_client import KernelClient
 from jupyter_nbmodel_client import (
     NbModelClient,
@@ -13,12 +15,12 @@ from jupyter_nbmodel_client import (
 )
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("jupyter")
+mcp = FastMCP(name="jupyter", json_response=False, stateless_http=True)
 
 
 NOTEBOOK_PATH: str = os.getenv("NOTEBOOK_PATH", "notebook.ipynb")
 
-SERVER_URL: str = os.getenv("SERVER_URL", "http://localhost:8888")
+SERVER_URL: str = os.getenv("SERVER_URL", "http://host.docker.internal:8888")
 
 TOKEN: str = os.getenv("TOKEN", "MY_TOKEN")
 
@@ -28,6 +30,21 @@ logger = logging.getLogger(__name__)
 
 kernel = KernelClient(server_url=SERVER_URL, token=TOKEN)
 kernel.start()
+
+
+@click.command()
+@click.option(
+    "--transport",
+    type=click.Choice(["stdio", "streamable-http"]),
+    default="stdio",
+    help="Transport type",
+)
+def main(transport: str):
+    """Run the Jupyter MCP server."""
+    if transport == "stdio":
+        mcp.run(transport="stdio")
+    elif transport == "streamable-http":
+        uvicorn.run(mcp.streamable_http_app, host="0.0.0.0", port=4040)  # noqa: S104
 
 
 def extract_output(output: dict) -> str:
@@ -341,4 +358,4 @@ async def delete_cell(cell_index: int) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    main()

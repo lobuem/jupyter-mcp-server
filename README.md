@@ -26,7 +26,7 @@
 
 ## 🏁 Getting Started
 
-Follow our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/docs/setup) or use the quick steps below:
+For comprehensive setup instructions—including Streamable HTTP transport and advanced configuration—see our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/docs/setup). Or, get started quickly with the `stdio` transport below:
 
 ### 1. Set Up Your Environment
 
