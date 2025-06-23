@@ -2,62 +2,71 @@
 
 The server currently offers 10 tools:
 
-1. `append_execute_code_cell`
-    - Append at the end of the notebook a code cell with the provided source and execute it.
-    - Input:
-      - `cell_source`(string): Code source.
-    - Returns: List of outputs from the executed cell.
+#### 1. `append_execute_code_cell`
 
-2. `append_markdown_cell`
-    - Append at the end of the notebook a markdown cell with the provided source.
-    - Input:
-      - `cell_source`(string): Markdown source.
-    - Returns: Success message.
+- Append at the end of the notebook a code cell with the provided source and execute it.
+- Input:
+  - `cell_source`(string): Code source.
+- Returns: List of outputs from the executed cell.
 
-3. `insert_execute_code_cell`
-    - Insert a code cell at a specific index in the notebook and execute it.
-    - Input:
-      - `cell_index`(int): Index where the cell should be inserted (0-based).
-      - `cell_source`(string): Code to be executed.
-    - Returns: Cell output.
+#### 2. `append_markdown_cell`
+    
+- Append at the end of the notebook a markdown cell with the provided source.
+- Input:
+  - `cell_source`(string): Markdown source.
+- Returns: Success message.
 
-4. `insert_markdown_cell`
-    - Insert a markdown cell at a specific index in the notebook.
-    - Input:
-      - `cell_index`(int): Index where the cell should be inserted (0-based).
-      - `cell_source`(string): Markdown source.
-    - Returns: Success message.
+#### 3. `insert_execute_code_cell`
 
-5. `delete_cell`
-    - Delete a specific cell from the notebook.
-    - Input:
-      - `cell_index`(int): Index of the cell to delete (0-based).
-    - Returns: Success message.
+- Insert a code cell at a specific index in the notebook and execute it.
+- Input:
+  - `cell_index`(int): Index where the cell should be inserted (0-based).
+  - `cell_source`(string): Code to be executed.
+- Returns: Cell output.
 
-6. `get_notebook_info`
-    - Get basic information about the notebook.
-    - Returns: Dictionary with notebook path, total cells, and cell type counts.
+#### 4. `insert_markdown_cell`
 
-7. `read_cell`
-    - Read a specific cell from the notebook.
-    - Input:
-      - `cell_index`(int): Index of the cell to read (0-based).
-    - Returns: Dictionary with cell index, type, source, and outputs (for code cells).
+- Insert a markdown cell at a specific index in the notebook.
+- Input:
+  - `cell_index`(int): Index where the cell should be inserted (0-based).
+  - `cell_source`(string): Markdown source.
+- Returns: Success message.
 
-8. `read_all_cells`
-    - Read all cells from the notebook.
-    - Returns:  List of cell information including index, type, source,
-                    and outputs (for code cells).
+#### 5. `delete_cell`
 
-9. `execute_cell`
-    - Execute a specific cell from the notebook.
-    - Input:
-      - `cell_index`(int): Index of the cell to execute (0-based).
-    - Returns: List of outputs from the executed cell.
+- Delete a specific cell from the notebook.
+- Input:
+  - `cell_index`(int): Index of the cell to delete (0-based).
+- Returns: Success message.
 
-10. `overwrite_cell_source`
-    - Overwrite the source of an existing cell.
-    - Input:
-      - `cell_index`(int): Index of the cell to overwrite (0-based).
-      - `cell_source`(string): New cell source - must match existing cell type.
-    - Returns: Success message.
+#### 6. `get_notebook_info`
+
+- Get basic information about the notebook.
+- Returns: Dictionary with notebook path, total cells, and cell type counts.
+
+#### 7. `read_cell`
+
+- Read a specific cell from the notebook.
+- Input:
+  - `cell_index`(int): Index of the cell to read (0-based).
+- Returns: Dictionary with cell index, type, source, and outputs (for code cells).
+
+#### 8. `read_all_cells`
+
+- Read all cells from the notebook.
+- Returns:  List of cell information including index, type, source, and outputs (for code cells).
+
+#### 9. `execute_cell`
+
+- Execute a specific cell from the notebook.
+- Input:
+  - `cell_index`(int): Index of the cell to execute (0-based).
+- Returns: List of outputs from the executed cell.
+
+#### 10. `overwrite_cell_source`
+
+- Overwrite the source of an existing cell.
+- Input:
+  - `cell_index`(int): Index of the cell to overwrite (0-based).
+  - `cell_source`(string): New cell source - must match existing cell type.
+- Returns: Success message.
