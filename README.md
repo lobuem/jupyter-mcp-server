@@ -5,6 +5,7 @@
 -->
 
 [![Datalayer](https://assets.datalayer.tech/datalayer-25.svg)](https://datalayer.io)
+
 [![Become a Sponsor](https://img.shields.io/static/v1?label=Become%20a%20Sponsor&message=%E2%9D%A4&logo=GitHub&style=flat&color=1ABC9C)](https://github.com/sponsors/datalayer)
 
 # 🪐✨ Jupyter MCP Server
@@ -12,7 +13,9 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/jupyter-mcp-server)](https://pypi.org/project/jupyter-mcp-server)
 [![smithery badge](https://smithery.ai/badge/@datalayer/jupyter-mcp-server)](https://smithery.ai/server/@datalayer/jupyter-mcp-server)
 
-**Jupyter MCP Server** is a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server implementation that provides interaction with 📓 Jupyter notebooks running in any JupyterLab (works also with your 💻 local JupyterLab).
+**Jupyter MCP Server** is a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server implementation that provides interaction with 📓 Jupyter notebooks running in any JupyterLab or Notebook>=7.
+
+This works also with your 💻 local Jupyter.
 
 ## 🚀 Key Features
 
@@ -22,11 +25,11 @@
 
 ![Jupyter MCP Server Demo](https://assets.datalayer.tech/jupyter-mcp/jupyter-mcp-server-claude-demo.gif)
 
-🛠️ This MCP offers multiple tools such as `insert_execute_code_cell`, `append_markdown_cell`, `get_notebook_info`, `read_cell`, and more, enabling advanced interactions with Jupyter notebooks. Explore our [Tools documentation](https://jupyter-mcp-server.datalayer.tech/tools) to learn about all the tools powering Jupyter MCP Server.
+🛠️ This MCP offers multiple tools such as `insert_execute_code_cell`, `append_markdown_cell`, `get_notebook_info`, `read_cell`, and more, enabling advanced interactions with Jupyter notebooks. Explore our [documentation](https://jupyter-mcp-server.datalayer.tech/tools) to learn about all the tools powering Jupyter MCP Server.
 
 ## 🏁 Getting Started
 
-For comprehensive setup instructions—including `Streamable HTTP` transport and advanced configuration—see our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/setup). Or, get started quickly with the `stdio` transport below:
+For comprehensive setup instructions—including `Streamable HTTP` transport and advanced configuration—see our [Setup Guide](https://jupyter-mcp-server.datalayer.tech/setup). Or, get started quickly with the `stdio` transport here below.
 
 ### 1. Set Up Your Environment
 
@@ -39,6 +42,7 @@ pip install datalayer_pycrdt==0.12.17
 ### 2. Start JupyterLab
 
 ```bash
+# make jupyterlab
 jupyter lab --port 8888 --IdentityProvider.token MY_TOKEN --ip 0.0.0.0
 ```
 
@@ -103,9 +107,10 @@ jupyter lab --port 8888 --IdentityProvider.token MY_TOKEN --ip 0.0.0.0
 }
 ```
 
-For detailed instructions on configuring various MCP clients—including [Claude Desktop](https://jupyter-mcp-server.datalayer.tech/clients/claude_desktop), [Cursor](https://jupyter-mcp-server.datalayer.tech/clients/cursor), [Cline](https://jupyter-mcp-server.datalayer.tech/clients/cline), and [Windsurf](https://jupyter-mcp-server.datalayer.tech/clients/windsurf)—see the [Clients documentation](https://jupyter-mcp-server.datalayer.tech/clients).
+For detailed instructions on configuring various MCP clients—including [Claude Desktop](https://jupyter-mcp-server.datalayer.tech/clients/claude_desktop), [Cursor](https://jupyter-mcp-server.datalayer.tech/clients/cursor), [Cline](https://jupyter-mcp-server.datalayer.tech/clients/cline), and [Windsurf](https://jupyter-mcp-server.datalayer.tech/clients/windsurf) — see the [Clients documentation](https://jupyter-mcp-server.datalayer.tech/clients).
 
 ## 📚 Resources
 
-Looking for blog posts, videos, or other materials about Jupyter MCP Server?<br>
-👉 Visit the [Resources section](https://jupyter-mcp-server.datalayer.tech/resources) for more.
+Looking for blog posts, videos, or other materials about Jupyter MCP Server?
+
+👉 Visit the [Resources section](https://jupyter-mcp-server.datalayer.tech/resources).
