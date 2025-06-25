@@ -141,7 +141,7 @@ You can set the `SERVER_URL` (JupyterLab Server URL), `TOKEN`, and `NOTEBOOK_PAT
 Use the following command to start the server on Linux.
 
 ```bash
-docker run -p 4040:4040 datalayer/jupyter-mcp-server:latest --transport streamable-http
+docker run --network=host -e SERVER_URL="http://localhost:8888" -p 4040:4040 datalayer/jupyter-mcp-server:latest --transport streamable-http
 ```
 
 ## Install via Smithery
