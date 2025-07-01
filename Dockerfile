@@ -17,4 +17,5 @@ RUN pip uninstall -y pycrdt datalayer_pycrdt
 RUN pip install datalayer_pycrdt==0.12.17
 
 EXPOSE 4040
-ENTRYPOINT ["python", "-m", "jupyter_mcp_server.server"]
+
+ENTRYPOINT ["python", "-m", "jupyter_mcp_server"]
