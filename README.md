@@ -1,14 +1,4 @@
-<!--
-  ~ Copyright (c) 2024- Datalayer, Inc.
-  ~
-  ~ BSD 3-Clause License
--->
 
-[![Datalayer](https://images.datalayer.io/brand/logos/datalayer-horizontal.svg)](https://datalayer.io)
-
-[![Become a Sponsor](https://img.shields.io/static/v1?label=Become%20a%20Sponsor&message=%E2%9D%A4&logo=GitHub&style=flat&color=1ABC9C)](https://github.com/sponsors/datalayer)
-
-<div align="center">
 
 <!-- omit in toc -->
 
@@ -16,12 +6,6 @@
 
 **An [MCP](https://modelcontextprotocol.io) server developed for AI to connect and manage Jupyter Notebooks in real-time**
 
-*Developed by [Datalayer](https://github.com/datalayer)*
-
-[![PyPI - Version](https://img.shields.io/pypi/v/jupyter-mcp-server?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/jupyter-mcp-server)
-[![Total PyPI downloads](https://img.shields.io/pepy/dt/jupyter-mcp-server?style=for-the-badge&logo=python&logoColor=white)](https://pepy.tech/project/jupyter-mcp-server)
-[![Docker Pulls](https://img.shields.io/docker/pulls/datalayer/jupyter-mcp-server?style=for-the-badge&logo=docker&logoColor=white&color=2496ED)](https://hub.docker.com/r/datalayer/jupyter-mcp-server)
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue?style=for-the-badge&logo=open-source-initiative&logoColor=white)](https://opensource.org/licenses/BSD-3-Clause)
 
 
 ![Jupyter MCP Server Demo](https://images.datalayer.io/products/jupyter-mcp-server/mcp-demo-multimodal.gif)
@@ -287,24 +271,11 @@ We welcome contributions of all kinds! Here are some examples:
 
 For detailed instructions on how to get started with development and submit your contributions, please see our [**Contributing Guide**](CONTRIBUTING.md).
 
-### Our Contributors
-
-[![Contributors](https://contrib.rocks/image?repo=datalayer/jupyter-mcp-server)](https://github.com/datalayer/jupyter-mcp-server/graphs/contributors)
 
 ## 📚 Resources
 
 Looking for blog posts, videos, or other materials about Jupyter MCP Server?
 
 👉 Visit the [**Resources section**](https://jupyter-mcp-server.datalayer.tech/resources) in our documentation for more!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=datalayer/jupyter-mcp-server&type=Date)](https://star-history.com/#datalayer/jupyter-mcp-server&type=Date)
-
-______________________________________________________________________
-
-<div align="center">
-
-**If this project is helpful to you, please give us a ⭐️**
-
-Made with ❤️ by [Datalayer](https://github.com/datalayer)
 
 </div>
